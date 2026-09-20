@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog de un ingeniero de software</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- El marco que uso para separar el sidebar del resto de contenido-->
+  <div class="app-shell">
+
+    <!-- el sidebar con las referencias de las distintas partes de la web-->
+    <aside class="sidebar">
+      <a href="#inicio" class="logo" title="M">M</a>
+
+      <nav class="sidebar-nav">
+        <a href="#inicio"   class="nav-icon active" title="Inicio">
+          <i class="bi bi-house-door-fill"></i>
+        </a>
+        <a href="#entradas" class="nav-icon" title="Entradas">
+          <i class="bi bi-journal-text"></i>
+        </a>
+        <a href="#sobre-mi" class="nav-icon" title="Sobre mí">
+          <i class="bi bi-person-fill"></i>
+        </a>
+        <a href="#contacto" class="nav-icon" title="Contacto">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="avatar" title="Perfil">A</div>
+      </div>
+    </aside>
+
+    <!-- El resto de contenido de la web: buscador, entradas, sobre mi y contactos -->
+    <main class="content">
+
+      <!-- Buscador de entradas -->
+      <header class="topbar">
+        <div class="topbar-search">
+          <i class="bi bi-search"></i>
+          <input type="text" id="buscador" placeholder="Buscar entradas...">
+        </div>
+        <div class="topbar-right">
+          <span class="dot dot-cyan"></span>
+          <span class="dot dot-magenta"></span>
+          <span class="dot dot-purple"></span>
+        </div>
+      </header>
+
+      <!-- Hero -->
+      <section class="hero-card" id="inicio">
+        <div class="hero-text">
+          <span class="hero-eyebrow">BLOG PERSONAL · 2026</span>
+          <h1 class="hero-title">
+            Mi Blog de<br>
+            <span class="text-gradient">Ingeniero de software</span>
+          </h1>
+          <p class="hero-desc">
+            Apuntes sobre <strong>Java</strong>, <strong>Linux</strong> y
+            <strong>bases de Datos</strong>. Un blog acerca de mis
+            primeros pasos como desarrollador.
+          </p>
+          <div class="hero-chips">
+            <span class="chip chip-cyan">JAVA</span>
+            <span class="chip chip-magenta">LINUX</span>
+            <span class="chip chip-purple">SQL</span>
+          </div>
+          <a href="#entradas" class="btn-zzz">
+            Explorar entradas <i class="bi bi-arrow-down-right"></i>
+          </a>
+        </div>
+        <div class="hero-image" aria-hidden="true"></div>
+      </section>
+
+      <!-- Entradas -->
+      <section class="section" id="entradas">
+
+        <div class="section-head">
+          <h2 class="section-title">
+            <i class="bi bi-collection-fill"></i> Entradas
+          </h2>
+          <span class="section-count" id="contador"></span>
+        </div>
+
+        <div class="entries-grid" id="listaEntradas"></div>
+
+        <p id="sinResultados" class="empty-msg d-none">
+          <i class="bi bi-emoji-frown"></i>
+          No se ha encontrado ninguna entrada.
+        </p>
+
+      </section>
+
+      <!-- Sobre mí -->
+      <section class="section about-card" id="sobre-mi">
+        <div class="about-avatar">A</div>
+        <div class="about-text">
+          <h2 class="section-title">Sobre mí</h2>
+          <p>
+            Soy Jacob, estudiante de Ingeniería de Software. 
+              Uso este blog para anotar algunas cosas que voy aprendiendo sobre este rubro: 
+              desde mis primeros pasos con Java y mi experiencia usando Linux como sistema operativo personal, 
+              hasta los dolores de cabeza que me generan las bases de datos.
+          </p>
+        </div>
+      </section>
+
+      <!-- Contacto -->
+      <section class="section" id="contacto">
+        <h2 class="section-title mb-4">
+          <i class="bi bi-envelope-fill"></i> Contacto
+        </h2>
+
+        <form id="formContacto" class="row g-3" novalidate>
+          <div class="col-md-6">
+            <label class="form-label" for="nombre">Nombre</label>
+            <input type="text" id="nombre" class="form-zzz" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="email">Correo</label>
+            <input type="email" id="email" class="form-zzz" required>
+          </div>
+          <div class="col-12">
+            <label class="form-label" for="mensaje">Mensaje</label>
+            <textarea id="mensaje" rows="3" class="form-zzz" required></textarea>
+          </div>
+          <div class="col-12">
+            <button class="btn-zzz" type="submit">
+              Enviar <i class="bi bi-send"></i>
+            </button>
+          </div>
+        </form>
+
+        <div id="avisoContacto" class="mt-3"></div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p class="mb-0">© <span id="anio"></span> Mi Blog — Actividad 1 individual</p>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="modalEntrada" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
+      <div class="modal-content modal-zzz">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="modalTitulo"></h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" id="modalCuerpo"></div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn-zzz-outline" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
