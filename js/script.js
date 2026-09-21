@@ -185,13 +185,13 @@ SELECT nombre FROM autor WHERE id_autor = 1;   -- solo uno</code></pre>
       etiquetas: ["Git", "GitHub"],
       resumen: "Aprendí a guardar versiones de mis proyectos y a subirlos a GitHub para no perderlos.",
       contenido: `
-        <pAl principio me confundió que <code>Git</code> y <code>GitHub</code> no fueran lo mismo. Había usado <code>GitHub</code> en el pasado para descargar mods,
+        <p>Al principio me confundió que <code>Git</code> y <code>GitHub</code> no fueran lo mismo. Había usado <code>GitHub</code> en el pasado para descargar mods,
         ejecutables y algún que otro proyecto de código abierto, así que pensé que se trataba de lo mismo. 
         A raíz de este error, terminé descubriendo una de las herramientas de desarrollo de software más importantes hasta la fecha.</p>
 
         <h5>1. Qué es Git y qué es GitHub</h5>
         <p><code>Git</code> es un programa que se instala en tu ordenador y sirve para
-        guardar versiones de tu proyecto. Permite entre otras cosas: crear ramaz del mismo proyecto, que varias personas trabajen en el mismo codigo en simultaneo,
+        guardar versiones de tu proyecto. Permite entre otras cosas: crear ramas del mismo proyecto, que varias personas trabajen en el mismo código en simultaneo,
         permite gestionar los cambios realizados o volver a versiones anteriores del mismo proyecto. Por otro lado tenemos a <code>GitHub</code>, una página web donde puedes subir
         esos proyectos para tenerlos en la nube y compartirlos.</p>
 
@@ -219,8 +219,8 @@ git log           # ver el historial de cambios</code></pre>
 git checkout nueva-idea  # cambiarte a ella
 git checkout main        # volver a la principal
 git merge nueva-idea     # juntar los cambios</code></pre>
-        <p>Al principio me parecio medio absurdo tener que realizar todo esto, pero con forme crecen los proyectos simplemente terminas
-        obligado a mantener una correcta organización, no solo del codigo, sino de los cambioes que se hacen en el.</p>
+        <p>Al principio me pareció medio absurdo tener que realizar todo esto, pero conforme crecen los proyectos simplemente terminas
+        obligado a mantener una correcta organización, no solo del codigo, sino de los cambios que se hacen en él.</p>
 
         <h5>5. Subir el proyecto a GitHub</h5>
         <p>Primero creas un repositorio vacío en GitHub (con el botón "New repository").
