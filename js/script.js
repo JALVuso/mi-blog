@@ -173,6 +173,83 @@ SELECT nombre FROM autor WHERE id_autor = 1;   -- solo uno</code></pre>
           pero mi falta de experiencia hizo que terminara teniendo problemas para conectar el SQL de <code>Docker</code>
           con <code>Nvim</code>. Tras varias horas, terminé desistiendo y usando la terminal directamente.</p>
       `
+    },
+        //git
+    {
+      id: "git",
+      titulo: "Aprendiendo Git y GitHub",
+      fecha: "20 de marzo de 2026",
+      categoria: "GIT",
+      colorCategoria: "var(--rojo)",
+      thumb: "thumb-cyan",
+      etiquetas: ["Git", "GitHub"],
+      resumen: "Aprendí a guardar versiones de mis proyectos y a subirlos a GitHub para no perderlos.",
+      contenido: `
+        <pAl principio me confundió que <code>Git</code> y <code>GitHub</code> no fueran lo mismo. Había usado <code>GitHub</code> en el pasado para descargar mods,
+        ejecutables y algún que otro proyecto de código abierto, así que pensé que se trataba de lo mismo. 
+        A raíz de este error, terminé descubriendo una de las herramientas de desarrollo de software más importantes hasta la fecha.</p>
+
+        <h5>1. Qué es Git y qué es GitHub</h5>
+        <p><code>Git</code> es un programa que se instala en tu ordenador y sirve para
+        guardar versiones de tu proyecto. Permite entre otras cosas: crear ramaz del mismo proyecto, que varias personas trabajen en el mismo codigo en simultaneo,
+        permite gestionar los cambios realizados o volver a versiones anteriores del mismo proyecto. Por otro lado tenemos a <code>GitHub</code>, una página web donde puedes subir
+        esos proyectos para tenerlos en la nube y compartirlos.</p>
+
+        <h5>2. Instalar y configurar</h5>
+        <p>Se descarga de <code>git-scm.com</code> y se instala como cualquier programa.
+        Después, en la terminal, hay que decirle quién eres (esto se hace una sola vez):</p>
+        <pre><code>git config --global user.name "nombre de usuario"
+git config --global user.email "tuCorreo@email.com"</code></pre>
+        <p>Esa información es la que aparecerá en cada cambio que guardes.</p>
+
+        <h5>3. Los comandos comunes</h5>
+        <p>Estos son los que uso el 90% del tiempo:</p>
+        <pre><code>git init          # empezar a controlar una carpeta
+git status        # ver qué archivos han cambiado
+git add .         # preparar todos los cambios
+git commit -m "nombreDelCambio"   # guardar los cambios
+git log           # ver el historial de cambios</code></pre>
+        <p>El flujo normal es: haces cambios en tu código, los miras con <code>status</code>,
+        los preparas con <code>add</code>, y los guardas con <code>commit</code>.</p>
+
+        <h5>4. Ramas</h5>
+        <p>Una rama sirve para probar cosas sin tocar la versión principal
+        del proyecto. Si sale bien, la juntas. Si sale mal, la borras y no ha pasado nada.</p>
+        <pre><code>git branch nueva-idea    # crear una rama
+git checkout nueva-idea  # cambiarte a ella
+git checkout main        # volver a la principal
+git merge nueva-idea     # juntar los cambios</code></pre>
+        <p>Al principio me parecio medio absurdo tener que realizar todo esto, pero con forme crecen los proyectos simplemente terminas
+        obligado a mantener una correcta organización, no solo del codigo, sino de los cambioes que se hacen en el.</p>
+
+        <h5>5. Subir el proyecto a GitHub</h5>
+        <p>Primero creas un repositorio vacío en GitHub (con el botón "New repository").
+        Después, en tu terminal, conectas tu proyecto local con el de GitHub:</p>
+        <pre><code>git remote add origin https://github.com/TU-USUARIO/mi-proyecto.git
+git branch -M main
+git push -u origin main</code></pre>
+        <p>La primera vez te pide iniciar sesión. A partir de ahí, cada vez que quieras
+        subir cambios nuevos:</p>
+        <pre><code>git add .
+git commit -m "Nuevo cambio"
+git push</code></pre>
+        <p>Y si estás en otro ordenador y quieres bajarte los cambios:</p>
+        <pre><code>git clone https://github.com/TU-USUARIO/mi-proyecto.git</code></pre>
+
+        <h5>6. Errores que cometí</h5>
+        <ul>
+          <li><strong>Hacer commits enormes:</strong> mejor muchos pequeños con mensajes
+              claros que uno gigante con "cambios varios".</li>
+          <li><strong>No leer lo que dice <code>git status</code>:</strong> ahí te explica
+              exactamente qué hacer. Es como una guía.</li>
+          <li><strong>Realizar los cambios en la rama raíz:</strong> la lógica dice que <code>Git</code> permite varias ramas precisamente para no hacer cambios en la rama raíz.</li>
+          <li><strong>Usar <code>git push --force</code>:</strong> práctica desaconsejada y bastante riesgosa</li>
+        </ul>
+        <h5>Lo que aprendí</h5>
+        <p>Que <code>Git</code> no es solo para equipos. Aunque trabajes solo, sirve para no perder
+        el trabajo, probar cosas nuevas y poder volver atrás si algo se rompe.
+        Y <code>GitHub</code> es perfecto para tener los proyectos a la vista cuando quieres enseñarlos.</p>
+      `
     }
   ];
 
