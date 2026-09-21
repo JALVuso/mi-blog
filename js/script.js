@@ -65,7 +65,7 @@ tareas.add(new Tarea(2, "Hacer la compra"));</code></pre>
       `
     },
 
-    /* ---------- ENTRADA 2: LINUX ---------- */
+    /* Linux */
     {
       id: "linux",
       titulo: "yo uso Arch Linux",
@@ -106,8 +106,8 @@ sudo pacman -Syu # actualiza el sistema junto a los programas instalados</code><
         <pre><code>chmod 755 script.sh   # el dueño puede todo, los demás solo leer y ejecutar</code></pre>
 
         <h5>4. Instalar programas</h5>
-        <pre><code>sudo apt update
-sudo apt install firefox</code></pre>
+        <pre><code>sudo pacman -Syu
+sudo pacman firefox</code></pre>
 
         <h5>Lo que aprendí</h5>
         <p>Linux al principio puede ser bastante exigente, 
@@ -119,7 +119,7 @@ sudo apt install firefox</code></pre>
       `
     },
 
-    /* ---------- ENTRADA 3: SQL ---------- */
+    /* SQL */
     {
       id: "sql",
       titulo: "Creación de una base de datos con SQL",
