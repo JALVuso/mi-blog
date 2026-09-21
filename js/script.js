@@ -3,8 +3,8 @@
 $(function () {
 
   /*
-   *  En una situación normal, las entradas serian ingresadas usando un json para 
-   *  mantener una division de responsabilidades mas adecuada, pero el buscador 
+   *  En una situación normal, las entradas serían ingresadas usando un json para 
+   *  mantener una división de responsabilidades más adecuada, pero el buscador 
    *  restringe la lectura de archivos en modo file::, asi que lo mantengo como 
    *  un array constante de datos.
   */
@@ -77,24 +77,24 @@ tareas.add(new Tarea(2, "Hacer la compra"));</code></pre>
       resumen: "Instalé Arch linux en mi ordenador personal, debido a los problemas en Windows.",
       contenido: `
         <p>Como lo lees, instalé <code>Arch Linux</code> en mi ordenador personal debido a los constantes
-           problemas que Windows a tenido en los ultimos años. Lo logico hubiera sido usar un <strong>Sistema Operativo</strong>
-           mas acorde a mi experiencia como ubuntu o mint, pero eso seria aburrido, y a mí no me gusta aburrirme.</p>
-        <p>Instale arch fue facil, pese a que destrui la distribución en mi primer intento de configurarlo,
-           mi configuracion, para acerlo corto, utiliza wayland junto a hyprland, varios drivers de nvidia y algunas configuraciones mas.</p>
+           problemas que Windows ha tenido en los últimos años. Lo lógico hubiera sido usar un <strong>Sistema Operativo</strong>
+           más acorde a mi experiencia como Ubuntu o Mint, pero eso seria aburrido, y a mí no me gusta aburrirme.</p>
+        <p>Instalar arch fue fácil, pese a que destruí la distribución en mi primer intento de configurarlo,
+           mi configuración, para hacerlo corto, utiliza Wayland junto a Hyprland, varios drivers de NVIDIA y algunas configuraciones más.</p>
 
         <h5>1. Los comandos que más uso</h5>
         <pre><code>pwd              # señala el directorio en el que me encuentro
-ls               # ver los archivos del directorio, aunque prefiero usar ll
-cd /home         # entrar en otra carpeta
+ls               # ver los archivos del directorio, aunque suelo usar ll tambien
+cd /home         # entrar en otra carpeta o cd .. para volver a la anterior
 mkdir {nombre del directorio}      # crear una carpeta
 cp a.txt b.txt   # copiar un archivo
 mv a.txt b.txt   # mover o renombrar
-rm archivo       # borrar (¡cuidado!)
+rm archivo       # borrar (¡cuidado! un error y borras el directorio raíz)
 sudo pacman -Syu # actualiza el sistema junto a los programas instalados</code></pre>
 
         <h5>2. Las carpetas principales</h5>
         <p>En Linux no hay discos <code>C:</code>. Todo cuelga de la raíz <code>/</code> lo cual
-          a sido un problema para mi, ya que no le di suficiente espacio para las actualizaciones:</p>
+          ha sido, un problema para mi, ya que no le di suficiente espacio para las actualizaciones:</p>
         <pre><code>/home   → las carpetas de los usuarios
 /etc    → configuración del sistema
 /var    → registros (logs)
@@ -107,7 +107,7 @@ sudo pacman -Syu # actualiza el sistema junto a los programas instalados</code><
 
         <h5>4. Instalar programas</h5>
         <pre><code>sudo pacman -Syu
-sudo pacman firefox</code></pre>
+sudo pacman -S firefox</code></pre>
 
         <h5>Lo que aprendí</h5>
         <p>Linux al principio puede ser bastante exigente, 
