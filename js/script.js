@@ -347,6 +347,7 @@ git push</code></pre>
 
   /* Años y arranque */
   $("#anio").text(new Date().getFullYear());
+  entradas.sort((a, b) => b.fechaOrden.localeCompare(a.fechaOrden); // ordenar por fecha
   pintarEntradas(entradas);
 
 });
