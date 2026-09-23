@@ -21,7 +21,7 @@ doble clic en `index.html`. No hace falta instalar nada más.
 
 ## ¿Qué hace?
 
-- Muestra 3 entradas en forma de tarjetas.
+- Muestra 4 entradas en forma de tarjetas ordenadas por fecha.
 - Tiene un buscador que filtra las entradas mientras escribes.
 - Al hacer clic en una entrada se abre en una ventana con el
   contenido completo.
